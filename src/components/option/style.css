@@ -1,0 +1,15 @@
+.options{
+    display: flex;
+}
+
+.option {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 120px;
+    height: 100%;
+    cursor: pointer;
+    padding: 0 5px;
+}
