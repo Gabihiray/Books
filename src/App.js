@@ -1,10 +1,14 @@
 import styled from 'styled-components'
 import Header from './components/header';
+import Search from './components/search';
+import NewsBooks from './components/newsBooks';
 
 function App() {
   return (
     <AppContainer>
       <Header/>
+      <Search/>
+      <NewsBooks/>
     </AppContainer>
   );
 }
