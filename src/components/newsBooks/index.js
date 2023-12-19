@@ -1,15 +1,29 @@
 import { books } from './dataNewsBooks' 
 import styled from 'styled-components'
+import { Title } from '../title/index'
+import CardRecommendation from '../card'
+import imgBook from '../../img/livro2.png'
 
 function NewsBooks() {
     return (
         <LatestBooksContainer>
-            <Title>Últimos lançamentos</Title>
+            <Title 
+            color='#eb9b00' 
+            size="36px" 
+            >
+                Últimos lançamentos
+            </Title>
             <NewsBooksContainer>
             {books.map( books => (
                 <img src={books.src}/>
             ))}
             </NewsBooksContainer>
+            <CardRecommendation
+            title="Talvez você se interesse por"
+            substitle="Angular 11"
+            description="Construindo uma aplicação com a plataforma Google"
+            img={imgBook}
+            />
         </LatestBooksContainer>
     )
 }
@@ -21,15 +35,6 @@ const LatestBooksContainer = styled.section`
     flex-direction: column;
 `
 
-const Title = styled.h2`
-    width: 100%;
-    padding: 30px 0;
-    background-color: #FFF;
-    color: #eb9b00;
-    font-size: 36px;
-    text-align: center;
-    margin: 0;
-`
 const NewsBooksContainer = styled.div`
     margin-top: 30px;
     display: flex;
